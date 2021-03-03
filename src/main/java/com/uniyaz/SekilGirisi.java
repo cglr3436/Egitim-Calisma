@@ -12,9 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SekilGirisi extends HttpServlet {
-    static class FileList implements Serializable {
-        List<Sekil> Sekillist = new ArrayList<>();
-    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter myResponse = resp.getWriter();
@@ -95,41 +93,22 @@ public class SekilGirisi extends HttpServlet {
                 "\n" +
                 "");
 
-//        String dosya_adi2="C:\\Projeler\\servlet\\sekil.csv";
-//        File file=new File(dosya_adi2);
-//        if (file.createNewFile()) {
-//            System.out.println("File created: " + file.getName());
-//        } else {
-//            System.out.println("File already exists.");
-//        }
-//        ArrayList<Sekil> SekilListe2=new ArrayList<Sekil>();
-//        ArrayList<Sekil> OkunanListe=new ArrayList<Sekil>();
-//        SekilListe2.add(girilen_sekil);
-//        SekilListe2.add(girilen_sekil);
-//       FileService  fileService=new FileService();
-//        fileService.writeSerializeliste(dosya_adi2,SekilListe2);
-
-        FileService  fileService=new FileService();
-        String sekil_yolu="C:\\Projeler\\servlet\\sekiller.txt";
-        File file2=new File(sekil_yolu);
-        file2.createNewFile();
-        fileService.writeFile(sekil_yolu,girilen_sekil.toString() );
 
         FileService fileService2=new FileService();
-        String dosya_adi2="C:\\Projeler\\servlet\\text.csv";
-        File file=new File(dosya_adi2);
+        String dosya_adi="C:\\Projeler\\servlet\\text.csv";
+        File file=new File(dosya_adi);
         try {
-            file2.createNewFile();
+            file.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
         ArrayList<Sekil> OgrenciListe = new ArrayList<>();
         OgrenciListe=new ArrayList<Sekil>();
         if (file.length() != 0) {
-            OgrenciListe.addAll(fileService2.readSerializeListe(dosya_adi2));
+            OgrenciListe.addAll(fileService2.readSerializeListe(dosya_adi));
         }
         OgrenciListe.add(girilen_sekil);
-        fileService2.writeSerializeListe(dosya_adi2,OgrenciListe);
+        fileService2.writeSerializeListe(dosya_adi,OgrenciListe);
         System.out.println(OgrenciListe.toString());
 
         //super.doPost(req, resp);

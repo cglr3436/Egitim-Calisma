@@ -7,7 +7,7 @@ import java.util.List;
 public class Dosya {
 
 
-   static SekilList MyClassList = new SekilList();
+
     static ArrayList<Sekil> recordList = new ArrayList<Sekil>();
 
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ A.cevre_hesabi();
 A.alan_hesabi();
 
 
-        MyClassList.liste.add(A);
+
 
         String filepath =  "C:\\Projeler\\servlet\\sekil.txt";;
 

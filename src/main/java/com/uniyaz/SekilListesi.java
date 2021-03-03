@@ -16,45 +16,14 @@ public class SekilListesi extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-//        String dosya_adi2="C:\\Projeler\\servlet\\sekil.csv";
-//        File file=new File(dosya_adi2);
-//        if (file.createNewFile()) {
-//            System.out.println("File created: " + file.getName());
-//        } else {
-//            System.out.println("File already exists.");
-//        }
-/*
-        ArrayList<Sekil> OkunanListe=new ArrayList<Sekil>();
-        FileService  fileService2=new FileService();
-        OkunanListe= fileService2.readSerializeliste(dosya_adi2);
-        System.out.println(OkunanListe.toString());
-
-       Sekil A= new Kare(4,4);
-       A.alan_hesabi();
-       A.cevre_hesabi();
-        Sekil B= new Kare(3,3);
-        B.alan_hesabi();
-        B.cevre_hesabi();
-        OkunanListe.add(A);
-        OkunanListe.add(B);
-*/
-
-/*
-        FileService  fileService2=new FileService();
-        String sekil_yolu="C:\\Projeler\\servlet\\sekiller.txt";
-        File file2=new File(sekil_yolu);
-        file2.createNewFile();
-        List<String> SekilLis=new ArrayList<>();
-        SekilLis=fileService2.oku(sekil_yolu);
-*/
         FileService fileService2=new FileService();
-        String dosya_adi2="C:\\Projeler\\servlet\\text.csv";
-        File file2=new File(dosya_adi2);
+        String dosya_adi="C:\\Projeler\\servlet\\text.csv";
+        File file2=new File(dosya_adi);
         file2.createNewFile();
         ArrayList<Sekil> OgrenciListe = new ArrayList<>();
         OgrenciListe=new ArrayList<Sekil>();
         if (file2.length() != 0) {
-            OgrenciListe.addAll(fileService2.readSerializeListe(dosya_adi2));
+            OgrenciListe.addAll(fileService2.readSerializeListe(dosya_adi));
         }
 
 
