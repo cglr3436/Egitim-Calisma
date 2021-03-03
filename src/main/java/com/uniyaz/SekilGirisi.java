@@ -95,7 +95,7 @@ public class SekilGirisi extends HttpServlet {
 
 
         FileService fileService2=new FileService();
-        String dosya_adi="C:\\Projeler\\servlet\\text.csv";
+        String dosya_adi="text.csv";
         File file=new File(dosya_adi);
         try {
             file.createNewFile();

@@ -17,7 +17,7 @@ public class SekilListesi extends HttpServlet {
 
 
         FileService fileService2=new FileService();
-        String dosya_adi="C:\\Projeler\\servlet\\text.csv";
+        String dosya_adi="text.csv";
         File file2=new File(dosya_adi);
         file2.createNewFile();
         ArrayList<Sekil> OgrenciListe = new ArrayList<>();
