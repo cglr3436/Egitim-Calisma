@@ -1,0 +1,32 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>OgrenciServlet</servlet-name>
+    <servlet-class>com.uniyaz.OgrenciServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OgrenciServlet</servlet-name>
+    <url-pattern>/Ogrenci</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SekilGirisi</servlet-name>
+    <servlet-class>com.uniyaz.SekilGirisi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SekilGirisi</servlet-name>
+    <url-pattern>/SekilGirisi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SekilListesi</servlet-name>
+    <servlet-class>com.uniyaz.SekilListesi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SekilListesi</servlet-name>
+    <url-pattern>/SekilListesi</url-pattern>
+  </servlet-mapping>
+
+</web-app>
